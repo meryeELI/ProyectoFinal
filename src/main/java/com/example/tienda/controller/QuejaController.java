@@ -1,11 +1,10 @@
 package com.example.tienda.controller;
 import com.example.tienda.DTO.QuejaDTO;
-import com.example.tienda.Repository.QuejaRepository;
 import com.example.tienda.Service.QuejaService;
 import com.example.tienda.Service.RepresentanteService;
 import com.example.tienda.Service.UsuarioService;
 import com.example.tienda.model.Queja;
-import com.example.tienda.model.Representante;
+import com.example.tienda.model.Proveedor;
 import com.example.tienda.model.usuario;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.web.bind.annotation.*;
@@ -33,7 +32,7 @@ public class QuejaController {
         queja.setEstado(quejaDTO.getEstado());
 
         // Buscar representante y asignar
-        Representante rep = representanteService.obtenerPorId(quejaDTO.getRepresentanteId());
+        Proveedor rep = representanteService.obtenerPorId(quejaDTO.getRepresentanteId());
         queja.setRepresentante(rep);
 
         usuario user = usuarioService.obtenerPorId(quejaDTO.getUsuarioId());

@@ -4,7 +4,7 @@ import com.example.tienda.Service.RepresentanteService;
 import com.example.tienda.DTO.RepresentanteDTO;
 import com.example.tienda.DTO.RepresentanteCreatesDTO;
 import com.example.tienda.Mapper.RepresentanteMapper;
-import com.example.tienda.model.Representante;
+import com.example.tienda.model.Proveedor;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -30,11 +30,11 @@ public class RepresentanteController {
     })
     @PostMapping
     public RepresentanteDTO crearRepresentante(@RequestBody RepresentanteCreatesDTO dto) {
-        Representante nuevo = new Representante();
+        Proveedor nuevo = new Proveedor();
         nuevo.setNombre(dto.getNombre());
         nuevo.setDui(dto.getDui());
 
-        Representante guardado = service.guardar(nuevo);
+        Proveedor guardado = service.guardar(nuevo);
         return RepresentanteMapper.toDTO(guardado);
     }
 
@@ -60,7 +60,7 @@ public class RepresentanteController {
     @PutMapping("/{id}")
     public RepresentanteDTO actualizarRepresentante(@PathVariable Long id,
                                                     @RequestBody RepresentanteCreatesDTO datos) {
-        Representante actualizado = service.actualizar(id, datos);
+        Proveedor actualizado = service.actualizar(id, datos);
         return RepresentanteMapper.toDTO(actualizado);
     }
 
