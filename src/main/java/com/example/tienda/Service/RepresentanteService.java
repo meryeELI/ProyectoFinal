@@ -36,7 +36,8 @@ public class RepresentanteService {
     public Proveedor actualizar(Long id, RepresentanteCreatesDTO datos) {
         Proveedor rep = obtenerPorId(id);
         rep.setNombre(datos.getNombre());
-        rep.setCorreo(datos.getEmail());
+        rep.setCorreo(datos.getCorreo());
+        rep.setTelefono(datos.getTelefono());
         return repository.save(rep);
     }
 

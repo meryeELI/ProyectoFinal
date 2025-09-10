@@ -19,7 +19,12 @@ public class MauinaController {
     public MauinaController(MaquinaService service) { this.service = service; }
 
     @PostMapping
-    @Operation(summary = "Crear una máquina", description = "Crea una nueva máquina asignándole un proveedor existente")
+    @Operation(summary = "Crear una máquina", description = "Crea una nueva máquina asignándole un proveedor existente {\n" +
+            " \n" +
+            "  \"nombre\": \"Yamato 322\",\n" +
+            "  \"modelo\": \"GTF2\"\n" +
+            " \n" +
+            "}")
     public MaquinaDTO crear(@RequestBody Maquina maquina, @RequestParam Long proveedorId) {
         return MauinaMapper.toDTO(service.crear(maquina, proveedorId));
     }

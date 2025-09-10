@@ -19,7 +19,13 @@ public class FalloController {
     public FalloController(FalloService service) { this.service = service; }
 
     @PostMapping
-    @Operation(summary = "Registrar un fallo", description = "Crea un nuevo fallo para una máquina y una parte determinada")
+    @Operation(summary = "Registrar un fallo", description = "Crea un nuevo fallo para una máquina y una parte determinada  {\n" +
+            " \n" +
+            "  \n" +
+            "  \"fechaReporte\": \"2025-09-10T05:02:27.913Z\",\n" +
+            "  \"estado\": \"pendinete\",\n" +
+            "  \"descripcion\": \"salio de funciones\"\n" +
+            "}")
     public FalloDTO crear(@RequestBody fallo fallo,
                           @RequestParam Long parteId,
                           @RequestParam Long maquinaId) {

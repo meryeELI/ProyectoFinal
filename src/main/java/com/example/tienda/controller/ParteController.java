@@ -19,7 +19,12 @@ public class ParteController {
     public ParteController(ParteService service) { this.service = service; }
 
     @PostMapping
-    @Operation(summary = "Crear una parte", description = "Crea una nueva parte y la asigna a una máquina existente")
+    @Operation(summary = "Crear una parte", description = "Crea una nueva parte y la asigna a una máquina existente {\n" +
+            " \n" +
+            "  \"nombreParte\": \"string\",\n" +
+            "  \"descripcion\": \"string\",\n" +
+            "  \"costo\": 0\n" +
+            "}")
     public ParteDTO crear(@RequestBody parte p, @RequestParam Long maquinaId) {
         return ParteMapper.toDTO(service.crear(p, maquinaId));
     }

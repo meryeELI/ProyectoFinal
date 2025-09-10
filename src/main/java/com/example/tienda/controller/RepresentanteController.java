@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/representante")
+@RequestMapping("/api/proveedor")
 public class RepresentanteController {
 
     private final RepresentanteService service;
@@ -22,9 +22,9 @@ public class RepresentanteController {
         this.service = service;
     }
 
-    @Operation(summary = "Crear un nuevo representante")
+    @Operation(summary = "Crear un nuevo proveedor")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "201", description = "representante creado exitosamente"),
+            @ApiResponse(responseCode = "201", description = "proveedor creado exitosamente"),
             @ApiResponse(responseCode = "400", description = "Datos de entrada inválidos"),
             @ApiResponse(responseCode = "500", description = "Error interno del servidor")
     })
@@ -33,14 +33,16 @@ public class RepresentanteController {
         Proveedor nuevo = new Proveedor();
         nuevo.setNombre(dto.getNombre());
         nuevo.setDui(dto.getDui());
-
+        nuevo.setTelefono(dto.getTelefono());
+        nuevo.setDireccion(dto.getDireccion());
+        nuevo.setCorreo(dto.getCorreo());
         Proveedor guardado = service.guardar(nuevo);
         return RepresentanteMapper.toDTO(guardado);
     }
 
-    @Operation(summary = "Listar todos los representantes")
+    @Operation(summary = "Listar todos los proveedores")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Listado de representantes obtenido correctamente"),
+            @ApiResponse(responseCode = "200", description = "Listado de proveedores obtenido correctamente"),
             @ApiResponse(responseCode = "500", description = "Error interno del servidor")
     })
     @GetMapping
@@ -51,10 +53,10 @@ public class RepresentanteController {
                 .toList();
     }
 
-    @Operation(summary = "Actualizar un representante por ID")
+    @Operation(summary = "Actualizar un proveedor por ID")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "representante obtenidos correctamente"),
-            @ApiResponse(responseCode = "404", description = "representante no encontrado"),
+            @ApiResponse(responseCode = "200", description = "proveedores obtenidos correctamente"),
+            @ApiResponse(responseCode = "404", description = "proveedor no encontrado"),
             @ApiResponse(responseCode = "500", description = "Error interno del servidor")
     })
     @PutMapping("/{id}")
@@ -64,10 +66,10 @@ public class RepresentanteController {
         return RepresentanteMapper.toDTO(actualizado);
     }
 
-    @Operation(summary = "Eliminar un representante por ID")
+    @Operation(summary = "Eliminar un proveedor por ID")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "204", description = "representante eliminado correctamente"),
-            @ApiResponse(responseCode = "404", description = "representante no encontrado"),
+            @ApiResponse(responseCode = "204", description = "proveedor eliminado correctamente"),
+            @ApiResponse(responseCode = "404", description = "proveedor no encontrado"),
             @ApiResponse(responseCode = "500", description = "Error interno del servidor")
     })
     @DeleteMapping("/{id}")
