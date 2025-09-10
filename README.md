@@ -7,32 +7,40 @@ La presente propuesta detalla el desarrollo e implementación de un Sistema Inte
 
 ## 📌 Situación Actual (Problemática Ampliada)
 La operación actual del taller se caracteriza por los siguientes desafíos:
-Inventario Inexacto: La falta de un sistema centralizado provoca que el inventario físico rara vez coincida con los registros, lo que genera compras innecesarias o, peor aún, detener la producción por desabastecimiento.
-Procesos Propensos a Errores: La captura manual de entradas y salidas de material es lenta y susceptible a errores de digitación, omisiones y duplicidades, lo que distorsiona la información financiera y operativa.
-Gestión de Proveedores: La imposibilidad de acceder rápidamente al historial de compras, precios y desempeño de proveedores debilita la capacidad de negociación y planificación del taller.
-Mantenimiento: Las máquinas se reparan solo cuando fallan, causando retrasos críticos. No existe un historial de mantenimiento que ayude a diagnosticar problemas recurrentes o a planificar sustituciones preventivas de piezas.
+
+* Inventario Inexacto: La falta de un sistema centralizado provoca que el inventario físico rara vez coincida con los registros, lo que genera compras innecesarias o, peor aún, detener la producción por desabastecimiento.
+
+* Procesos Propensos a Errores: La captura manual de entradas y salidas de material es lenta y susceptible a errores de digitación, omisiones y duplicidades, lo que distorsiona la información financiera y operativa.
+
+* Gestión de Proveedores: La imposibilidad de acceder rápidamente al historial de compras, precios y desempeño de proveedores debilita la capacidad de negociación y planificación del taller.
+
+* Mantenimiento: Las máquinas se reparan solo cuando fallan, causando retrasos críticos. No existe un historial de mantenimiento que ayude a diagnosticar problemas recurrentes o a planificar sustituciones preventivas de piezas.
 
 ## 🎯 Objetivos
 ### Objetivo General
 Desarrollar e implementar un Sistema Integrado de Gestión que automatice el control de inventario, la gestión de proveedores y el plan de mantenimiento de máquinas, con el fin de incrementar la productividad, reducir costos y mejorar la toma de decisiones en el Taller de Costura "Tijera de Oro".
 
 ### Objetivos Específicos
-Digitalizar el registro y seguimiento de todos los materiales (materia prima y producto terminado).
-Centralizar la información de proveedores y el historial de compras para facilitar el análisis y la negociación.
-Establecer un registro digital del historial de mantenimiento para cada máquina.
+* Digitalizar el registro y seguimiento de todos los materiales (materia prima y producto terminado).
+* Centralizar la información de proveedores y el historial de compras para facilitar el análisis y la negociación.
+* Establecer un registro digital del historial de mantenimiento para cada máquina.
 
 ## 🛠 Metodología
-Se propone utilizar una metodología ágil, para el desarrollo del proyecto, lo que permitirá iteraciones rápidas, retroalimentación constante del cliente y una entrega incremental de funcionalidades de valor. Este enfoque garantiza que el sistema final se ajuste perfectamente a las necesidades reales del taller. 
-Análisis: Definición detallada de los requisitos, el alcance y el plan del proyecto.
-Diseño: Elaboración de prototipos de la interfaz de usuario (UI) y el diseño de la base de datos.
-Desarrollo: Construcción incremental del sistema en sprints de 2-3 semanas.
-Pruebas: Ciclos de pruebas de funcionalidad, usabilidad y rendimiento.
+Se propone utilizar una metodología ágil, para el desarrollo del proyecto, lo que permitirá iteraciones rápidas, retroalimentación constante del cliente y una entrega incremental de funcionalidades de valor. Este enfoque garantiza que el sistema final se ajuste perfectamente a las necesidades reales del taller.
+
+1. Análisis: Definición detallada de los requisitos, el alcance y el plan del proyecto.
+2. Diseño: Elaboración de prototipos de la interfaz de usuario (UI) y el diseño de la base de datos.
+3. Desarrollo: Construcción incremental del sistema en sprints de 2-3 semanas.
+4. Pruebas: Ciclos de pruebas de funcionalidad, usabilidad y rendimiento.
 
 ## 🧩💡 Cómo Gestionaremos la Problemática: Diseño de la Solución
 La problemática se abordará con una arquitectura de software moderna y robusta:
-Frontend: Una aplicación web responsive desarrollada con componentes como Bootstrap y DataTables, para una interfaz intuitiva, moderna y con capacidades avanzadas de visualización de datos.
-Backend: Una API RESTful, Esta API será el corazón del sistema, gestionando toda la lógica de negocio, autenticación y comunicación con la base de datos.
-Base de Datos: Un sistema de gestión de bases de datos relacional como SQLite, para garantizar la integridad, consistencia y seguridad de la información.
+
+* Frontend: Una aplicación web responsive desarrollada con componentes como Bootstrap y DataTables, para una interfaz intuitiva, moderna y con capacidades avanzadas de visualización de datos.
+
+* Backend: Una API RESTful, Esta API será el corazón del sistema, gestionando toda la lógica de negocio, autenticación y comunicación con la base de datos.
+
+* Base de Datos: Un sistema de gestión de bases de datos relacional como SQLite, para garantizar la integridad, consistencia y seguridad de la información.
 
 ## 🗄 Diseño Preliminar de la Base de Datos
 A continuación, se presenta un modelo entidad-relación simplificado que constituye la base del sistema:
