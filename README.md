@@ -120,10 +120,10 @@ La implementación del Sistema Integrado de Gestión para el Taller de Costura "
 
 ## 💡📋 Recomendaciones
 
-Compromiso de la Dirección: Es crucial el apoyo y compromiso continuo de la administración del taller para liderar el cambio organizacional que conlleva la implementación de un nuevo sistema.
-Participación del Usuario Final: Involucrar a los operarios y al personal administrativo desde las etapas de diseño y prueba garantizará que el sistema sea intuitivo y se adopte sin resistencia.
-Implementación por Fases: Se recomienda desplegar el sistema por módulos (por ejemplo, Inventario primero, luego Proveedores, luego Mantenimiento) para facilitar la capacitación y minimizar la interrupción operativa.
-Plan de Respaldo y Contingencia: Establecer desde el inicio políticas de respaldo automático de la información y un plan claro de acción en caso de incidencias técnicas.
+1. Compromiso de la Dirección: Es crucial el apoyo y compromiso continuo de la administración del taller para liderar el cambio organizacional que conlleva la implementación de un nuevo sistema.
+2. Participación del Usuario Final: Involucrar a los operarios y al personal administrativo desde las etapas de diseño y prueba garantizará que el sistema sea intuitivo y se adopte sin resistencia.
+3. Implementación por Fases: Se recomienda desplegar el sistema por módulos (por ejemplo, Inventario primero, luego Proveedores, luego Mantenimiento) para facilitar la capacitación y minimizar la interrupción operativa.
+4. Plan de Respaldo y Contingencia: Establecer desde el inicio políticas de respaldo automático de la información y un plan claro de acción en caso de incidencias técnicas.
 
 ## 👨‍💻 Autores
 
