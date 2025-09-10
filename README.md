@@ -1,4 +1,4 @@
-# 📌 Propuesta de Implementación de un Sistema Integrado de Gestión (SIG)  para el Taller de Costura " Tijera de Oro "
+# 📌 Propuesta de Implementación de un Sistema Integrado de Gestión (SIG)  para el Taller de Costura "Tijera de Oro"
 
 ## 📖 Introducción
 El Taller de Costura "Tijera de Oro" se encuentra en una fase de crecimiento en la que la eficiencia operativa es crucial para su sostenibilidad y expansión. Actualmente, la gestión de sus procesos principales como el manejo de los inventarios de materiales, relación con proveedores y mantenimiento de maquinaria se basa en métodos manuales y descentralizados. Esta dependencia de registros en papel y hojas de cálculo ha introducido un alto nivel de incertidumbre, errores e ineficiencias que afectan directamente a la rentabilidad y capacidad de producción del taller.
