@@ -2,30 +2,30 @@ package com.example.tienda.Service;
 
 
 import com.example.tienda.DTO.RepresentanteCreatesDTO;
-import com.example.tienda.Repository.RepredentsnteRepository;
-import com.example.tienda.model.Representante;
+import com.example.tienda.Repository.ProveedorRepository;
+import com.example.tienda.model.Proveedor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class RepresentanteService {
-    private final RepredentsnteRepository repository;
+    private final ProveedorRepository repository;
 
 
-    public RepresentanteService(RepredentsnteRepository repository) {
+    public RepresentanteService(ProveedorRepository repository) {
         this.repository = repository;
     }
 
-    public List<Representante> listarTodas() {
+    public List<Proveedor> listarTodas() {
         return repository.findAll();
     }
 
-    public Representante guardar(Representante representante) {
-        return repository.save(representante);
+    public Proveedor guardar(Proveedor proveedor) {
+        return repository.save(proveedor);
     }
 
-    public Representante obtenerPorId(Long id) {
+    public Proveedor obtenerPorId(Long id) {
         return repository.findById(id).orElse(null);
     }
 
@@ -33,10 +33,11 @@ public class RepresentanteService {
         repository.deleteById(id);
     }
 
-    public Representante actualizar(Long id, RepresentanteCreatesDTO datos) {
-        Representante rep = obtenerPorId(id);
+    public Proveedor actualizar(Long id, RepresentanteCreatesDTO datos) {
+        Proveedor rep = obtenerPorId(id);
         rep.setNombre(datos.getNombre());
-        rep.setCorreo(datos.getEmail());
+        rep.setCorreo(datos.getCorreo());
+        rep.setTelefono(datos.getTelefono());
         return repository.save(rep);
     }
 

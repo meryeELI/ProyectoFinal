@@ -17,7 +17,7 @@ public class Queja {
     @ManyToOne(optional = false)
     @JoinColumn(name = "representante_id")
     @JsonBackReference(value = "rep-quejas")
-    private Representante representante;
+    private Proveedor proveedor;
 
     @ManyToOne(optional = true)
     @JoinColumn(name = "usuario_id")
@@ -42,8 +42,8 @@ public class Queja {
     public String getEstado() { return estado; }
     public void setEstado(String estado) { this.estado = estado; }
 
-    public Representante getRepresentante() { return representante; }
-    public void setRepresentante(Representante representante) { this.representante = representante; }
+    public Proveedor getRepresentante() { return proveedor; }
+    public void setRepresentante(Proveedor proveedor) { this.proveedor = proveedor; }
 
     public usuario getUsuario() { return usuario; }
     public void setUsuario(usuario usuario) { this.usuario = usuario; }
